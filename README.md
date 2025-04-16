@@ -12,7 +12,7 @@ docker compose up
 The server will be available at [http://localhost:8080/reference-server](http://localhost:8080/reference-server), and the FHIR endpoint is at
 [http://localhost:8080/reference-server/r4](http://localhost:8080/reference-server/r4)
 
-By default, the postgres database included here is not persisted with a volume, so restarting the containers will reload the latest contents of `./resources/`
+By default, the postgres database included here is not persisted with a volume, so bringing the containers down (`docker compose down`) then back up will reload the latest contents of `./resources/`
 
 ## License
 
