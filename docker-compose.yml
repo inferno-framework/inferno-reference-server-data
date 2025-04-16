@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:9.6-alpine
+    ports:
+      - '5432:5432'
+    networks:
+      - fhirnet
+    # Uncomment the lines below and the volume declaration at the bottom
+    # to enable persisting data across restarts.
+    # volumes:
+    #   - fhir-pgdata:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+  fhir:
+    image: infernocommunity/inferno-reference-server
+    ports:
+      - '8080:8080'
+    environment:
+      - CUSTOM_BEARER_TOKEN=SAMPLE_TOKEN
+    volumes:
+      - ./resources:/var/lib/jetty/resources/
+      - ./clients:/var/lib/jetty/clients/
+    networks:
+      - fhirnet
+    depends_on:
+      - db
+
+networks:
+  fhirnet:
+
+# volumes:
+#   fhir-pgdata:
