@@ -89,7 +89,7 @@
               ],
               "text": "Medical record number"
             },
-            "system": "Inferno",
+            "system": "urn:inferno:mrn",
             "value": "us-core-client-tests-patient"
           }
         ],
@@ -571,7 +571,7 @@
                 }
               ]
             },
-            "system": "http://example.org/fhir/memberidentifier",
+            "system": "urn:inferno:memberidentifier",
             "value": "88800933501"
           }
         ],
@@ -594,6 +594,9 @@
         "subscriberId": "888009335",
         "beneficiary": {
           "reference": "Patient/us-core-client-tests-patient"
+        },
+        "payor": {
+          "reference": "Organization/us-core-client-tests-organization"
         },
         "relationship": {
           "coding": [
@@ -1517,7 +1520,7 @@
             {
               "system": "http://loinc.org",
               "code": "75773-2",
-              "display": "Goals, preferences, and priorities for medical treatment [Reported]"
+              "display": "Goals, preferences, and priorities for medical treatment Narrative - Reported"
             }
           ],
           "text": "preferences for medical treatment"
@@ -2573,7 +2576,7 @@
               }
             ],
             "system": "email",
-            "value": "Sammie902.DuBuque211@example.com",
+            "value": "Sammie902.DuBuque211@mitre.org",
             "use": "work"
           }
         ],
@@ -2655,7 +2658,7 @@
               }
             ],
             "system": "email",
-            "value": "Sammie902.DuBuque211@example.com",
+            "value": "Sammie902.DuBuque211@mitre.org",
             "use": "work"
           }
         ],
@@ -2694,6 +2697,9 @@
             },
             "who": {
               "reference": "Practitioner/us-core-client-tests-practitioner"
+            },
+            "onBehalfOf": {
+              "reference": "Organization/us-core-client-tests-organization"
             }
           },
           {
@@ -2709,6 +2715,9 @@
             },
             "who": {
               "reference": "Practitioner/us-core-client-tests-practitioner"
+            },
+            "onBehalfOf": {
+              "reference": "Organization/us-core-client-tests-organization"
             }
           }
         ],
@@ -2760,7 +2769,7 @@
           },
           {
             "system": "email",
-            "value": "sarah.vanputten@example.com",
+            "value": "sarah432.vanputten1111@mitre.org",
             "use": "home"
           }
         ],
@@ -2798,7 +2807,7 @@
           }
         ],
         "accessionIdentifier": {
-          "system": "http://acme.com/labs/accession-ids",
+          "system": "urn:inferno:accession-ids",
           "value": "20220927-00124"
         },
         "type": {
