@@ -595,9 +595,11 @@
         "beneficiary": {
           "reference": "Patient/us-core-client-tests-patient"
         },
-        "payor": {
-          "reference": "Organization/us-core-client-tests-organization"
-        },
+        "payor": [
+          {
+            "reference": "Organization/us-core-client-tests-organization"
+          }
+        ],
         "relationship": {
           "coding": [
             {
