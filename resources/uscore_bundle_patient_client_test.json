@@ -253,6 +253,10 @@
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan"
           ]
         },
+        "text": {
+          "status": "additional",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Respiratory Therapy Plan</div>"
+        },
         "status": "completed",
         "intent": "order",
         "category": [
@@ -364,15 +368,48 @@
                   {
                     "system": "http://snomed.info/sct",
                     "code": "116154003",
-                    "display": "Patient"
+                    "display": "Patient (person)"
                   }
                 ],
                 "text": "Patient"
               }
             ],
             "member": {
-              "reference": "Patient/us-core-client-tests-patient",
-              "display": "Mr. Dustin31 Ritchie586"
+              "reference": "Patient/us-core-client-tests-patient"
+            }
+          },
+          {
+            "role": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "309343006",
+                    "display": "Physician (occupation)"
+                  }
+                ],
+                "text": "Physician"
+              }
+            ],
+            "member": {
+              "reference": "PractitionerRole/us-core-client-tests-practitioner-role"
+            }
+          },
+          {
+            "role": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "1287116005",
+                    "display": "Chaperone (person)"
+                  }
+                ],
+                "text": "Niece"
+              }
+            ],
+            "member": {
+              "reference": "RelatedPerson/us-core-client-tests-related-person"
             }
           }
         ],
@@ -1168,10 +1205,11 @@
     },
     {
       "resource": {
+        "resourceType": "Observation",
         "id": "us-core-client-tests-observation-lab",
         "meta": {
           "profile": [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab|7.0.0"
           ]
         },
         "status": "final",
@@ -1181,26 +1219,24 @@
               {
                 "system": "http://terminology.hl7.org/CodeSystem/observation-category",
                 "code": "laboratory",
-                "display": "laboratory"
+                "display": "Laboratory"
               }
-            ]
+            ],
+            "text": "Laboratory"
           }
         ],
         "code": {
           "coding": [
             {
               "system": "http://loinc.org",
-              "code": "785-6",
-              "display": "MCH [Entitic mass] by Automated count"
+              "code": "1975-2",
+              "display": "Bilirub SerPl-mCnc"
             }
           ],
-          "text": "MCH [Entitic mass] by Automated count"
+          "text": "Bilirub SerPl-mCnc"
         },
         "subject": {
           "reference": "Patient/us-core-client-tests-patient"
-        },
-        "encounter": {
-          "reference": "Encounter/us-core-client-tests-encounter"
         },
         "effectivePeriod": {
           "start": "1972-01-13T18:33:18-05:00",
@@ -1208,12 +1244,53 @@
         },
         "issued": "1972-01-13T18:33:18.715-05:00",
         "valueQuantity": {
-          "value": 28.25,
-          "unit": "pg",
+          "value": 8.6,
+          "unit": "mg/dL",
           "system": "http://unitsofmeasure.org",
-          "code": "pg"
+          "code": "mg/dL"
         },
-        "resourceType": "Observation"
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "H",
+                "display": "High"
+              }
+            ],
+            "text": "High"
+          }
+        ],
+        "specimen": {
+          "reference": "Specimen/us-core-client-tests-specimen",
+          "display": "Serum specimen"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 2,
+              "unit": "mg/dL",
+              "system": "http://unitsofmeasure.org",
+              "code": "mg/dL"
+            },
+            "high": {
+              "value": 7,
+              "unit": "mg/dL",
+              "system": "http://unitsofmeasure.org",
+              "code": "mg/dL"
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "normal",
+                  "display": "Normal Range"
+                }
+              ],
+              "text": "Normal Range"
+            }
+          }
+        ]
       },
       "request": {
         "method": "PUT",
@@ -1733,9 +1810,8 @@
         "subject": {
           "reference": "Patient/us-core-client-tests-patient"
         },
-        "effectivePeriod": {
-          "start": "2016-03-18T05:27:04Z"
-        },
+        "effectiveDateTime": "2016-03-18T05:27:04Z",
+        "issued": "2016-03-18T05:27:04Z",
         "valueCodeableConcept": {
           "coding": [
             {
@@ -2193,6 +2269,16 @@
         "note": [
           {
             "text": "CDC Males, 2-20 years Chart"
+          }
+        ],
+        "performer": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "unknown"
+              }
+            ]
           }
         ]
       },
@@ -2878,10 +2964,6 @@
             {
               "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
               "valueString": "Temperature Example"
-            },
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-              "valueMarkdown": "This is a temperature example for the *Vitalsigns Profile*."
             }
           ],
           "profile": [
@@ -2944,10 +3026,6 @@
             {
               "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
               "valueString": "Oxygen Saturation Example"
-            },
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-              "valueMarkdown": "This is a typical oxygen saturation example for the *US Core Pulse Oximetry Profile* on room air where no oxygen concentration is recorded."
             }
           ],
           "profile": [
@@ -3011,16 +3089,6 @@
         "resourceType": "Observation",
         "id": "us-core-client-tests-observation-screening-assessment",
         "meta": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-              "valueString": "10 minute Apgar Color Example"
-            },
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-              "valueMarkdown": "This example of a US Core Survey Observation Profile illustrates its use to directly capture individual surveys assessment items as an observations. It is not derived from a FHIR QuestionnaireResponse."
-            }
-          ],
           "profile": [
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
           ]
@@ -3060,12 +3128,6 @@
         "valueCodeableConcept": {
           "coding": [
             {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
-                  "valueDecimal": 2
-                }
-              ],
               "system": "http://loinc.org",
               "code": "LA6724-4",
               "display": "Good color all over"
@@ -3088,10 +3150,6 @@
             {
               "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
               "valueString": "Capillary refill Time Nail Bed Example"
-            },
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-              "valueMarkdown": "This is a Capillary refill Time Nail Bed Example for the *Clinical Test Result Observation Profile*."
             }
           ],
           "profile": [
@@ -3143,6 +3201,119 @@
       "request": {
         "method": "PUT",
         "url": "Observation/us-core-client-tests-observation-clinical-result"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "us-core-client-tests-observation-imaging",
+        "meta": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+              "valueString": "Capillary refill Time Nail Bed Example"
+            }
+          ],
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "imaging",
+                "display": "Imaging"
+              }
+            ],
+            "text": "Imaging"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "18782-3",
+              "display": "Radiology Study observation (narrative)"
+            }
+          ],
+          "text": "Findings"
+        },
+        "subject": {
+          "reference": "Patient/us-core-client-tests-patient"
+        },
+        "encounter": {
+          "display": "ER Visit"
+        },
+        "effectiveDateTime": "2019-02-03T19:43:30.000Z",
+        "valueString": "LINES AND TUBES: None.\\n LUNGS AND PLEURA:\\n Clear lungs. Normal pulmonary vascularity.\\n No pleural effusion.\\n No pneumothorax.\\n HEART, MEDIASTINUM AND HILA:\\n Heart is normal in size.\\n Normal mediastinal and hilar contour.\\n BONES AND SOFT TISSUES:\\n No acute abnormality.\\n"
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/us-core-client-tests-observation-imaging"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "us-core-client-tests-observation-clinical-test",
+        "meta": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+              "valueString": "Capillary refill Time Nail Bed Example"
+            }
+          ],
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-observation-category",
+                "code": "clinical-test",
+                "display": "Clinical Test"
+              }
+            ],
+            "text": "Clinical Test"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "44974-4",
+              "display": "Pulse intensity Palpation"
+            }
+          ],
+          "text": "Pulse intensity Palpation"
+        },
+        "subject": {
+          "reference": "Patient/us-core-client-tests-patient"
+        },
+        "encounter": {
+          "display": "Cardiology Consult"
+        },
+        "effectiveDateTime": "2021-11-10T16:48:57.246958-08:00",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "LA11841-6",
+              "display": "1+"
+            }
+          ],
+          "text": "1+"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/us-core-client-tests-observation-clinical-test"
       }
     }
   ]
