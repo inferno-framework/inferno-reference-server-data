@@ -34,7 +34,7 @@
         ],
         "identifier": [
           {
-            "system": "https://infenro.healthit.gov",
+            "system": "https://github.com/inferno-framework/us-core-test-kit",
             "value": "a24eb240-9ea3-4fa5-b12d-b798587879d7"
           }
         ],

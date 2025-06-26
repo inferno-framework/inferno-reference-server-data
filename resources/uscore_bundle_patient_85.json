@@ -15680,7 +15680,7 @@
         ],
         "contributor": [
           {
-            "reference": "urn:uuid:501b80ff-6017-bab2-3f33-cbafacde1586 "
+            "reference": "urn:uuid:501b80ff-6017-bab2-3f33-cbafacde1586"
           }
         ],
         "resourceType": "CarePlan"
