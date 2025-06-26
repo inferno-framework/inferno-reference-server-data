@@ -50,36 +50,8 @@
             "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName",
-            "valueString": "Christen366 Murray856"
-          },
-          {
             "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
             "valueCode": "M"
-          },
-          {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex",
-            "valueCode": "248153007"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/patient-birthPlace",
-            "valueAddress": {
-              "city": "Springfield",
-              "state": "Massachusetts",
-              "country": "US"
-            }
-          },
-          {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-genderIdentity",
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "system": "http://snomed.info/sct",
-                  "code": "446151000124109",
-                  "display": "Identifies as male gender (finding)"
-                }
-              ]
-            }
           },
           {
             "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-tribal-affiliation",

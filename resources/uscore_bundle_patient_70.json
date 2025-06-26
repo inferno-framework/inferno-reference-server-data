@@ -1,0 +1,107 @@
+{
+  "type": "transaction",
+  "entry": [
+        {
+      "fullUrl": "urn:uuid:a24eb240-9ea3-4fa5-b12d-b798587879d7",
+      "resource": {
+        "id": "70",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Sample patient derived from US Core v7.0.0 examples</div>"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex",
+            "valueCode": "248152002"
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-genderIdentity",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+                  "code": "ASKU",
+                  "display": "asked but unknown"
+                }
+              ]
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://infenro.healthit.gov",
+            "value": "a24eb240-9ea3-4fa5-b12d-b798587879d7"
+          }
+        ],
+        "name": [
+          {
+            "family" : "Baxter",
+            "given" : [
+              "Amy",
+              "V."
+            ],
+            "suffix" : [
+              "PharmD"
+            ],
+            "period" : {
+              "start" : "2020-07-22"
+            }
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1987-02-20",
+        "resourceType": "Patient"
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Patient/70"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:530fc3a1-4f43-4144-9cd6-6593a7b374bb",
+      "resource": {
+        "id": "530fc3a1-4f43-4144-9cd6-6593a7b374bb",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"
+          ]
+        },
+        "target": [
+          {
+            "reference": "urn:uuid:a24eb240-9ea3-4fa5-b12d-b798587879d7"
+          }
+        ],
+        "recorded": "2023-02-28T15:26:23.217+00:00",
+        "agent": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+                  "code": "informant",
+                  "display": "Informant"
+                }
+              ],
+              "text": "Informant"
+            },
+            "who": {
+              "reference": "urn:uuid:a24eb240-9ea3-4fa5-b12d-b798587879d7",
+              "display": "Amy Baxter"
+            }
+          }
+        ],
+        "resourceType": "Provenance"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Provenance"
+      }
+    }
+  ],
+  "resourceType": "Bundle"
+}
