@@ -2269,6 +2269,9 @@
           "reference": "urn:uuid:e91975f5-9445-c11f-cabf-c3c6dae161f2"
         },
         "recordedDate": "1941-10-14T18:33:18-05:00",
+        "recorder": {
+          "reference": "urn:uuid:e91975f5-9445-c11f-cabf-c3c6dae161f2"
+        },
         "reaction": [
           {
             "manifestation": [
@@ -33867,7 +33870,10 @@
           "reference": "urn:uuid:e91975f5-9445-c11f-cabf-c3c6dae161f2"
         },
         "abatementDateTime": "2016-08-10T07:15:07-08:00",
-        "recordedDate": "2016-08-10T07:15:07-08:00"
+        "recordedDate": "2016-08-10T07:15:07-08:00",
+        "recorder": {
+          "reference": "urn:uuid:e91975f5-9445-c11f-cabf-c3c6dae161f2"
+        }
       },
       "request": {
         "method": "POST",

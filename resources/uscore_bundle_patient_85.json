@@ -1880,6 +1880,9 @@
         "onsetDateTime": "1940-12-24T00:11:45-05:00",
         "abatementDateTime": "1941-03-07T00:11:45-05:00",
         "recordedDate": "1940-12-24T00:11:45-05:00",
+        "recorder": {
+          "reference": "urn:uuid:8bee2ee3-d401-3728-9791-d235cfa01ab9"
+        },
         "resourceType": "Condition"
       },
       "request": {
@@ -2283,6 +2286,12 @@
         "effectiveDateTime": "1941-03-07T00:11:45-05:00",
         "issued": "1941-03-07T00:11:45.131-05:00",
         "performer": [
+          {
+            "reference": "urn:uuid:c38e2d6b-b2d5-3f8e-acae-3044eeb5edbb",
+            "display": "Dr. Melvin857 Torp761"
+          }
+        ],
+        "resultsInterpreter": [
           {
             "reference": "urn:uuid:c38e2d6b-b2d5-3f8e-acae-3044eeb5edbb",
             "display": "Dr. Melvin857 Torp761"
@@ -15667,6 +15676,11 @@
                 "display": "LOWELL GENERAL HOSPITAL"
               }
             }
+          }
+        ],
+        "contributor": [
+          {
+            "reference": "urn:uuid:501b80ff-6017-bab2-3f33-cbafacde1586 "
           }
         ],
         "resourceType": "CarePlan"
