@@ -518,6 +518,16 @@
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
           ]
         },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-interpreter-needed",
+            "valueCoding": {
+              "system": "http://snomed.info/sct",
+              "version": "http://snomed.info/sct/731000124108",
+              "code": "373067005"
+            }
+          }
+        ],
         "identifier": [
           {
             "use": "official",
@@ -628,6 +638,10 @@
         "subject": {
           "reference": "urn:uuid:d831ec91-c7a3-4a61-9312-7ff0c4a32134"
         },
+        "performer": [{
+          "reference": "urn:uuid:c38e2d6b-b2d5-3f8e-acae-3044eeb5edbb",
+          "display": "Dr. Melvin857 Torp761"
+        }],
         "effectiveDateTime": "2020-11-18T16:19:31-08:00",
         "valueQuantity": {
           "value": 51.2,
@@ -657,15 +671,15 @@
             ]
           }
         ],
-        "code" : {
-          "coding" : [
+        "code": {
+          "coding": [
             {
-              "system" : "http://snomed.info/sct",
-              "code" : "401201003",
-              "display" : "Cigarette pack-years (observable entity)"
+              "system": "http://snomed.info/sct",
+              "code": "401201003",
+              "display": "Cigarette pack-years (observable entity)"
             }
           ],
-          "text" : "Cigarette pack-years"
+          "text": "Cigarette pack-years"
         },
         "subject": {
           "reference": "urn:uuid:d831ec91-c7a3-4a61-9312-7ff0c4a32134"
@@ -675,11 +689,11 @@
         },
         "effectiveDateTime": "1940-03-29T00:11:45-05:00",
         "issued": "1940-03-29T00:11:45.131-05:00",
-        "valueQuantity" : {
-          "value" : 26,
-          "unit" : "pack-years",
-          "system" : "http://unitsofmeasure.org",
-          "code" : "{pack-years}"
+        "valueQuantity": {
+          "value": 26,
+          "unit": "pack-years",
+          "system": "http://unitsofmeasure.org",
+          "code": "{pack-years}"
         },
         "resourceType": "Observation"
       },
@@ -1609,7 +1623,7 @@
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"
           ]
         },
-        "identifier":[
+        "identifier": [
           {
             "system": "https://github.com/inferno-framework/us-core-test-kit",
             "value": "8e81b028-5271-9eda-b6c0-0e308770ee50"
@@ -5491,28 +5505,28 @@
         },
         "status": "stopped",
         "intent": "order",
-        "extension" : [
+        "extension": [
           {
-            "extension" : [
+            "extension": [
               {
-                "url" : "medicationAdherence",
-                "valueCodeableConcept" : {
-                  "coding" : [
+                "url": "medicationAdherence",
+                "valueCodeableConcept": {
+                  "coding": [
                     {
-                      "system" : "http://snomed.info/sct",
-                      "code" : "275928001",
-                      "display" : "Drugs - partial non-compliance (finding)"
+                      "system": "http://snomed.info/sct",
+                      "code": "275928001",
+                      "display": "Drugs - partial non-compliance (finding)"
                     }
                   ]
                 }
               },
               {
-                "url" : "dateAsserted",
-                "valueDateTime" : "2023-08-11T08:15:49.449Z"
+                "url": "dateAsserted",
+                "valueDateTime": "2023-08-11T08:15:49.449Z"
               },
               {
-                "url" : "informationSource",
-                "valueCodeableConcept" : {
+                "url": "informationSource",
+                "valueCodeableConcept": {
                   "coding": [
                     {
                       "system": "http://snomed.info/sct",
@@ -5523,7 +5537,7 @@
                 }
               }
             ],
-            "url" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication-adherence"
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication-adherence"
           }
         ],
         "medicationCodeableConcept": {
@@ -13822,6 +13836,10 @@
         "encounter": {
           "reference": "urn:uuid:73d083ce-bf6a-8a3a-d56b-2349f23049bc"
         },
+        "performer": [{
+          "reference": "urn:uuid:8bee2ee3-d401-3728-9791-d235cfa01ab9",
+          "display": "Dr. Willena258 Oberbrunner298"
+        }],
         "effectivePeriod": {
           "start": "1975-04-07T02:51:45-04:00",
           "end": "1975-04-07T03:51:45-04:00"
@@ -14328,6 +14346,10 @@
         "encounter": {
           "reference": "urn:uuid:d09874e2-0ea0-9a99-95b6-d7908e5acc35"
         },
+        "performer": [{
+          "reference": "urn:uuid:c38e2d6b-b2d5-3f8e-acae-3044eeb5edbb",
+          "display": "Dr. Melvin857 Torp761"
+        }],
         "effectiveDateTime": "1975-05-02T01:11:45-04:00",
         "issued": "1975-05-02T01:11:45.131-04:00",
         "valueCodeableConcept": {
@@ -16724,6 +16746,12 @@
           },
           {
             "reference": "urn:uuid:f85b5cca-bcf8-421c-bbcf-11db4dcb7e9c"
+          },
+          {
+            "reference": "urn:uuid:cf2587fa-6106-45f4-8264-fbe3d38853f5"
+          },
+          {
+            "reference": "urn:uuid:23c5bf6a-b411-424a-b466-9dee7f4838df"
           }
         ],
         "recorded": "1977-07-15T01:11:45.131-04:00",
@@ -17066,6 +17094,12 @@
         "subject": {
           "reference": "urn:uuid:d831ec91-c7a3-4a61-9312-7ff0c4a32134"
         },
+        "performer": [
+          {
+            "reference": "urn:uuid:c38e2d6b-b2d5-3f8e-acae-3044eeb5edbb",
+            "display": "Dr. Melvin857 Torp761"
+          }
+        ],
         "effectiveDateTime": "2005-07-05",
         "valueCodeableConcept": {
           "coding": [
@@ -17954,6 +17988,11 @@
         "subject": {
           "reference": "urn:uuid:d831ec91-c7a3-4a61-9312-7ff0c4a32134"
         },
+        "performer": [
+          {
+            "reference": "urn:uuid:d831ec91-c7a3-4a61-9312-7ff0c4a32134"
+          }
+        ],
         "effectiveDateTime": "2022-09-23T22:39:43Z",
         "valueCodeableConcept": {
           "coding": [
@@ -17961,7 +18000,7 @@
               "system": "http://snomed.info/sct",
               "code": "454381000124105",
               "display": "Not sure of desire to become pregnant (finding)",
-              "version" : "http://snomed.info/sct/731000124108"
+              "version": "http://snomed.info/sct/731000124108"
             }
           ]
         }
@@ -18010,6 +18049,11 @@
         "subject": {
           "reference": "urn:uuid:d831ec91-c7a3-4a61-9312-7ff0c4a32134"
         },
+        "performer": [
+          {
+            "reference": "urn:uuid:d831ec91-c7a3-4a61-9312-7ff0c4a32134"
+          }
+        ],
         "effectivePeriod": {
           "start": "2015-04-24"
         },
@@ -18092,6 +18136,11 @@
         "subject": {
           "reference": "urn:uuid:d831ec91-c7a3-4a61-9312-7ff0c4a32134"
         },
+        "performer": [
+          {
+            "reference": "urn:uuid:d831ec91-c7a3-4a61-9312-7ff0c4a32134"
+          }
+        ],
         "effectiveDateTime": "2022-08-24T10:39:52Z",
         "valueCodeableConcept": {
           "coding": [
@@ -18112,201 +18161,225 @@
     {
       "fullUrl": "urn:uuid:47576d19-ec6c-4ab9-b8e0-3e8ed99a35be",
       "resource": {
-          "resourceType": "Observation",
-          "id": "47576d19-ec6c-4ab9-b8e0-3e8ed99a35be",
-          "meta": {
-              "profile": [
-                  "http://hl7.org/fhir/us/core/StructureDefinition/us-core-treatment-intervention-preference|7.0.0-ballot"
-              ]
-          },
-          "identifier": [
-            {
-              "system": "https://github.com/inferno-framework/us-core-test-kit",
-              "value": "47576d19-ec6c-4ab9-b8e0-3e8ed99a35be"
-            }
-          ],
-          "status": "final",
-          "category": [
-              {
-                  "coding": [
-                      {
-                          "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
-                          "code": "treatment-intervention-preference",
-                          "display": "Treatment Intervention preference"
-                      }
-                  ],
-                  "text": "Treatment Intervention Preference"
-              }
-          ],
-          "code": {
+        "resourceType": "Observation",
+        "id": "47576d19-ec6c-4ab9-b8e0-3e8ed99a35be",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-treatment-intervention-preference|7.0.0"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "https://github.com/inferno-framework/us-core-test-kit",
+            "value": "47576d19-ec6c-4ab9-b8e0-3e8ed99a35be"
+          }
+        ],
+        "status": "final",
+        "category": [
+          {
             "coding": [
-                {
-                    "system": "http://loinc.org",
-                    "code": "75773-2",
-                    "display": "Goals, preferences, and priorities for medical treatment [Reported]"
-                  }
+              {
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
+                "code": "treatment-intervention-preference",
+                "display": "Treatment Intervention preference"
+              }
             ],
-            "text": "Goals, preferences, and priorities for medical treatment [Reported]"
-          },
-          "subject": {
-              "reference": "urn:uuid:d831ec91-c7a3-4a61-9312-7ff0c4a32134"
-          },
-          "effectiveDateTime": "2023-08-30",
-          "valueString": "If I am having significant pain or suffering, I would like my doctors to consult a Supportive and Palliative Care Team to help treat my physical, emotional and spiritual discomfort, and to support my family."
+            "text": "Treatment Intervention Preference"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "75773-2"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:d831ec91-c7a3-4a61-9312-7ff0c4a32134"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:d831ec91-c7a3-4a61-9312-7ff0c4a32134"
+          }
+        ],
+        "effectiveDateTime": "2023-08-30",
+        "valueString": "If I am having significant pain or suffering, I would like my doctors to consult a Supportive and Palliative Care Team to help treat my physical, emotional and spiritual discomfort, and to support my family."
       },
       "request": {
-          "method": "POST",
-          "url": "Observation"
+        "method": "POST",
+        "url": "Observation"
       }
     },
     {
       "fullUrl": "urn:uuid:a8972ead-fee5-4a96-be8a-9f2a77264d9d",
       "resource": {
-          "resourceType": "Observation",
-          "id": "a8972ead-fee5-4a96-be8a-9f2a77264d9d",
-          "meta": {
-              "profile": [
-                  "http://hl7.org/fhir/us/core/StructureDefinition/us-core-treatment-intervention-preference|7.0.0-ballot"
-              ]
-          },
-          "identifier": [
+        "resourceType": "Observation",
+        "id": "a8972ead-fee5-4a96-be8a-9f2a77264d9d",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-treatment-intervention-preference|7.0.0"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "https://github.com/inferno-framework/us-core-test-kit",
+            "value": "a8972ead-fee5-4a96-be8a-9f2a77264d9d"
+          }
+        ],
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
+                "code": "treatment-intervention-preference",
+                "display": "Treatment Intervention preference"
+              }
+            ],
+            "text": "Treatment Intervention Preference"
+          }
+        ],
+        "code": {
+          "coding": [
             {
-              "system": "https://github.com/inferno-framework/us-core-test-kit",
-              "value": "a8972ead-fee5-4a96-be8a-9f2a77264d9d"
+              "system": "http://loinc.org",
+              "code": "75773-2"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:d831ec91-c7a3-4a61-9312-7ff0c4a32134"
+        },
+        "effectiveDateTime": "2023-08-30",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
+              "code": "treatment-intervention-preference",
+              "display": "Treatment Intervention Preference"
             }
           ],
-          "status": "final",
-          "category": [
-              {
-                  "coding": [
-                      {
-                          "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
-                          "code": "treatment-intervention-preference",
-                          "display": "Treatment Intervention preference"
-                      }
-                  ],
-                  "text": "Treatment Intervention Preference"
-              }
-          ],
-          "code": {
-            "coding": [
-                {
-                    "system": "http://loinc.org",
-                    "code": "75773-2",
-                    "display": "Goals, preferences, and priorities for medical treatment [Reported]"
-                }
-            ],
-            "text": "Goals, preferences, and priorities for medical treatment [Reported]"
-          },
-              "subject": {
-              "reference": "urn:uuid:d831ec91-c7a3-4a61-9312-7ff0c4a32134"
-          },
-          "effectiveDateTime": "2023-08-30",
-          "valueCodeableConcept": {
-              "coding": [
-                  {
-                      "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
-                      "code": "treatment-intervention-preference",
-                      "display": "Treatment Intervention Preference"
-                  }
-              ],
-              "text": "Treatment Intervention Preference"
-          }
+          "text": "Treatment Intervention Preference"
+        }
       },
       "request": {
-          "method": "POST",
-          "url": "Observation"
+        "method": "POST",
+        "url": "Observation"
       }
     },
     {
       "fullUrl": "urn:uuid:db06bd66-469d-4556-9883-cd6a8be1f7e9",
       "resource": {
-          "resourceType" : "Observation",
-          "id" : "db06bd66-469d-4556-9883-cd6a8be1f7e9",
-          "meta" : {
-            "profile" : ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-care-experience-preference|7.0.0-ballot"]
-          },
-          "identifier": [
+        "resourceType": "Observation",
+        "id": "db06bd66-469d-4556-9883-cd6a8be1f7e9",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-care-experience-preference|7.0.0"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "https://github.com/inferno-framework/us-core-test-kit",
+            "value": "db06bd66-469d-4556-9883-cd6a8be1f7e9"
+          }
+        ],
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
+                "code": "care-experience-preference",
+                "display": "Care experience preference"
+              }
+            ],
+            "text": "Care Experience Preference"
+          }
+        ],
+        "code": {
+          "coding": [
             {
-              "system": "https://github.com/inferno-framework/us-core-test-kit",
-              "value": "db06bd66-469d-4556-9883-cd6a8be1f7e9"
+              "system": "http://loinc.org",
+              "code": "95541-9",
+              "display": "Care experience preference"
             }
           ],
-          "status" : "final",
-          "category" : [{
-            "coding" : [{
-              "system" : "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
-              "code" : "care-experience-preference",
-              "display" : "Care experience preference"
-            }],
-            "text" : "Care Experience Preference"
-          }],
-          "code" : {
-            "coding" : [{
-              "system" : "http://loinc.org",
-              "code" : "95541-9",
-              "display" : "Care experience preference"
-            }],
-            "text" : "Care Experience Preference"
-          },
-          "subject" : {
-            "reference" : "urn:uuid:d831ec91-c7a3-4a61-9312-7ff0c4a32134"
-          },
-          "effectiveDateTime" : "2023-08-30",
-          "valueString" : "For critical or end-of-life care, here are some examples of the things that I would like to have near me, music that I’d like to hear, and other details of my care that would help to keep me happy and relaxed: Like Bach, especially the cantatas.  St. Martin in the Fields"
+          "text": "Care Experience Preference"
         },
+        "subject": {
+          "reference": "urn:uuid:d831ec91-c7a3-4a61-9312-7ff0c4a32134"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:d831ec91-c7a3-4a61-9312-7ff0c4a32134"
+          }
+        ],
+        "effectiveDateTime": "2023-08-30",
+        "valueString": "For critical or end-of-life care, here are some examples of the things that I would like to have near me, music that I’d like to hear, and other details of my care that would help to keep me happy and relaxed: Like Bach, especially the cantatas.  St. Martin in the Fields"
+      },
       "request": {
-          "method": "POST",
-          "url": "Observation"
+        "method": "POST",
+        "url": "Observation"
       }
     },
     {
       "fullUrl": "urn:uuid:bef6c601-bc94-4f55-9f87-7f46afcc2943",
       "resource": {
-          "resourceType" : "Observation",
-          "id" : "bef6c601-bc94-4f55-9f87-7f46afcc2943",
-          "meta" : {
-            "profile" : ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-care-experience-preference|7.0.0-ballot"]
-          },
-          "identifier": [
+        "resourceType": "Observation",
+        "id": "bef6c601-bc94-4f55-9f87-7f46afcc2943",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-care-experience-preference|7.0.0-ballot"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "https://github.com/inferno-framework/us-core-test-kit",
+            "value": "bef6c601-bc94-4f55-9f87-7f46afcc2943"
+          }
+        ],
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
+                "code": "care-experience-preference",
+                "display": "Care experience preference"
+              }
+            ],
+            "text": "Care Experience Preference"
+          }
+        ],
+        "code": {
+          "coding": [
             {
-              "system": "https://github.com/inferno-framework/us-core-test-kit",
-              "value": "bef6c601-bc94-4f55-9f87-7f46afcc2943"
+              "system": "http://loinc.org",
+              "code": "95541-9",
+              "display": "Care experience preference"
             }
           ],
-          "status" : "final",
-          "category" : [{
-            "coding" : [{
-              "system" : "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
-              "code" : "care-experience-preference",
-              "display" : "Care experience preference"
-            }],
-            "text" : "Care Experience Preference"
-          }],
-          "code" : {
-            "coding" : [{
-              "system" : "http://loinc.org",
-              "code" : "95541-9",
-              "display" : "Care experience preference"
-            }],
-            "text" : "Care Experience Preference"
-          },
-          "subject" : {
-            "reference" : "urn:uuid:d831ec91-c7a3-4a61-9312-7ff0c4a32134"
-          },
-          "effectiveDateTime" : "2023-08-30",
-          "valueCodeableConcept" : {
-              "coding" : [{
-                "system" : "http://loinc.org",
-                "code" : "95541-9",
-                "display" : "Care experience preference"
-              }],
-              "text" : "Care Experience Preference"
-            }
+          "text": "Care Experience Preference"
         },
+        "subject": {
+          "reference": "urn:uuid:d831ec91-c7a3-4a61-9312-7ff0c4a32134"
+        },
+        "effectiveDateTime": "2023-08-30",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "95541-9",
+              "display": "Care experience preference"
+            }
+          ],
+          "text": "Care Experience Preference"
+        }
+      },
       "request": {
-          "method": "POST",
-          "url": "Observation"
+        "method": "POST",
+        "url": "Observation"
       }
     },
     {
@@ -18344,13 +18417,13 @@
         "collection": {
           "collectedDateTime": "2005-07-05T18:07:12Z",
           "bodySite": {
-              "coding": [
-                  {
-                      "system": "http://snomed.info/sct",
-                      "code": "106004",
-                      "display": "Posterior carpal region"
-                  }
-              ]
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "106004",
+                "display": "Posterior carpal region"
+              }
+            ]
           }
         },
         "container": [
@@ -18369,13 +18442,13 @@
         ],
         "condition": [
           {
-              "coding": [
-                  {
-                      "system": "http://terminology.hl7.org/CodeSystem/v2-0493",
-                      "code": "AUT",
-                      "display": "Autolyzed"
-                  }
-              ]
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0493",
+                "code": "AUT",
+                "display": "Autolyzed"
+              }
+            ]
           }
         ]
       },
@@ -18386,52 +18459,42 @@
     },
     {
       "fullUrl": "urn:uuid:1bc16d93-9ac8-4dc7-ad90-e649c01f8b19",
-      "resource":
-      {
+      "resource": {
         "resourceType": "MedicationDispense",
         "id": "1bc16d93-9ac8-4dc7-ad90-e649c01f8b19",
-        "meta":
-        {
-          "profile":
-          [
+        "meta": {
+          "profile": [
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationdispense"
           ]
         },
-        "identifier":
-        [
+        "identifier": [
           {
             "system": "https://github.com/inferno-framework/us-core-test-kit",
             "value": "1bc16d93-9ac8-4dc7-ad90-e649c01f8b19"
           }
         ],
         "status": "completed",
-        "medicationReference":
-        {
+        "medicationReference": {
           "reference": "urn:uuid:58f7a300-f288-6094-a82f-e1e64086902b",
           "display": "10 ML Furosemide 10 MG/ML Injection"
         },
-        "subject":
-        {
+        "subject": {
           "reference": "urn:uuid:d831ec91-c7a3-4a61-9312-7ff0c4a32134"
         },
-        "performer":
-        [
+        "performer": [
           {
-            "actor":
-            {
+            "actor": {
               "reference": "urn:uuid:8bee2ee3-d401-3728-9791-d235cfa01ab9",
               "display": "Dr. Willena258 Oberbrunner298"
             }
           },
           {
-            "actor":
-            {
+            "actor": {
               "reference": "urn:uuid:8e81b028-5271-9eda-b6c0-0e308770ee50"
             }
           }
         ],
-        "authorizingPrescription":
-        [
+        "authorizingPrescription": [
           {
             "reference": "urn:uuid:3722c630-7ccd-b25e-316d-78fd30a4ff30",
             "display": "10 ML Furosemide 10 MG/ML Injection"
@@ -18439,8 +18502,7 @@
         ],
         "whenHandedOver": "1975-04-07T02:51:45-04:00"
       },
-      "request":
-      {
+      "request": {
         "method": "POST",
         "url": "MedicationDispense"
       }
@@ -18532,6 +18594,15 @@
                 "periodUnit": "d"
               }
             },
+            "route": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "26643006",
+                  "display": "Oral route"
+                }
+              ]
+            },
             "doseAndRate": [
               {
                 "doseQuantity": {
@@ -18553,69 +18624,69 @@
     {
       "fullUrl": "urn:uuid:7fcb009a-2848-45fd-b563-052ca2ca154e",
       "resource": {
-        "resourceType" : "Observation",
-        "id" : "7fcb009a-2848-45fd-b563-052ca2ca154e",
-        "meta" : {
-          "profile" : [
+        "resourceType": "Observation",
+        "id": "7fcb009a-2848-45fd-b563-052ca2ca154e",
+        "meta": {
+          "profile": [
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
           ]
         },
-        "identifier":[
+        "identifier": [
           {
             "system": "https://github.com/inferno-framework/us-core-test-kit",
             "value": "7fcb009a-2848-45fd-b563-052ca2ca154e"
           }
         ],
-        "status" : "final",
-        "category" : [
+        "status": "final",
+        "category": [
           {
-            "coding" : [
+            "coding": [
               {
-                "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
-                "code" : "survey",
-                "display" : "Survey"
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey",
+                "display": "Survey"
               }
             ]
           },
           {
-            "coding" : [
+            "coding": [
               {
-                "system" : "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
-                "code" : "disability-status",
-                "display" : "Disability Status"
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
+                "code": "disability-status",
+                "display": "Disability Status"
               }
             ]
           }
         ],
-        "code" : {
-          "coding" : [
+        "code": {
+          "coding": [
             {
-              "system" : "http://loinc.org",
-              "code" : "44250-9",
-              "display" : "Little interest or pleasure in doing things in last 2 weeks"
+              "system": "http://loinc.org",
+              "code": "44250-9",
+              "display": "Little interest or pleasure in doing things in last 2 weeks"
             }
           ],
-          "text" : "Little interest or pleasure in doing things in last 2 weeks"
+          "text": "Little interest or pleasure in doing things in last 2 weeks"
         },
-        "subject" : {
-          "reference" : "urn:uuid:d831ec91-c7a3-4a61-9312-7ff0c4a32134"
+        "subject": {
+          "reference": "urn:uuid:d831ec91-c7a3-4a61-9312-7ff0c4a32134"
         },
-        "effectiveDateTime" : "2022-11-29T20:50:32.718000+00:00",
-        "performer" : [
+        "effectiveDateTime": "2022-11-29T20:50:32.718000+00:00",
+        "performer": [
           {
             "reference": "urn:uuid:8bee2ee3-d401-3728-9791-d235cfa01ab9",
             "display": "Dr. Willena258 Oberbrunner298"
           }
         ],
-        "valueCodeableConcept" : {
-          "coding" : [
+        "valueCodeableConcept": {
+          "coding": [
             {
-              "system" : "http://loinc.org",
-              "code" : "LA6570-1",
-              "display" : "More than half the days"
+              "system": "http://loinc.org",
+              "code": "LA6570-1",
+              "display": "More than half the days"
             }
           ],
-          "text" : "More than half the days"
+          "text": "More than half the days"
         }
       },
       "request": {
@@ -18626,69 +18697,69 @@
     {
       "fullUrl": "urn:uuid:8429d80d-2246-4a80-8502-8ba615a61c29",
       "resource": {
-        "resourceType" : "Observation",
-        "id" : "8429d80d-2246-4a80-8502-8ba615a61c29",
-        "meta" : {
-          "profile" : [
+        "resourceType": "Observation",
+        "id": "8429d80d-2246-4a80-8502-8ba615a61c29",
+        "meta": {
+          "profile": [
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
           ]
         },
-        "identifier":[
+        "identifier": [
           {
             "system": "https://github.com/inferno-framework/us-core-test-kit",
             "value": "8429d80d-2246-4a80-8502-8ba615a61c29"
           }
         ],
-        "status" : "final",
-        "category" : [
+        "status": "final",
+        "category": [
           {
-            "coding" : [
+            "coding": [
               {
-                "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
-                "code" : "survey",
-                "display" : "Survey"
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey",
+                "display": "Survey"
               }
             ]
           },
           {
-            "coding" : [
+            "coding": [
               {
-                "system" : "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
-                "code" : "functional-status",
-                "display" : "Functional Status"
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
+                "code": "functional-status",
+                "display": "Functional Status"
               }
             ]
           }
         ],
-        "code" : {
-          "coding" : [
+        "code": {
+          "coding": [
             {
-              "system" : "http://loinc.org",
-              "code" : "44255-8",
-              "display" : "Feeling down, depressed, or hopeless in last 2 weeks"
+              "system": "http://loinc.org",
+              "code": "44255-8",
+              "display": "Feeling down, depressed, or hopeless in last 2 weeks"
             }
           ],
-          "text" : "Feeling down, depressed, or hopeless in last 2 weeks"
+          "text": "Feeling down, depressed, or hopeless in last 2 weeks"
         },
-        "subject" : {
-          "reference" : "urn:uuid:d831ec91-c7a3-4a61-9312-7ff0c4a32134"
+        "subject": {
+          "reference": "urn:uuid:d831ec91-c7a3-4a61-9312-7ff0c4a32134"
         },
-        "effectiveDateTime" : "2022-11-29T20:50:32.718000+00:00",
-        "performer" : [
+        "effectiveDateTime": "2022-11-29T20:50:32.718000+00:00",
+        "performer": [
           {
             "reference": "urn:uuid:8bee2ee3-d401-3728-9791-d235cfa01ab9",
             "display": "Dr. Willena258 Oberbrunner298"
           }
         ],
-        "valueCodeableConcept" : {
-          "coding" : [
+        "valueCodeableConcept": {
+          "coding": [
             {
-              "system" : "http://loinc.org",
-              "code" : "LA6570-1",
-              "display" : "More than half the days"
+              "system": "http://loinc.org",
+              "code": "LA6570-1",
+              "display": "More than half the days"
             }
           ],
-          "text" : "More than half the days"
+          "text": "More than half the days"
         }
       },
       "request": {
@@ -18699,60 +18770,60 @@
     {
       "fullUrl": "urn:uuid:4ad13fb9-4a39-4622-a1c7-f7a580d405b6",
       "resource": {
-        "resourceType" : "Observation",
-        "id" : "4ad13fb9-4a39-4622-a1c7-f7a580d405b6",
-        "meta" : {
-          "profile" : [
+        "resourceType": "Observation",
+        "id": "4ad13fb9-4a39-4622-a1c7-f7a580d405b6",
+        "meta": {
+          "profile": [
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
           ]
         },
-        "identifier":[
+        "identifier": [
           {
             "system": "https://github.com/inferno-framework/us-core-test-kit",
             "value": "4ad13fb9-4a39-4622-a1c7-f7a580d405b6"
           }
         ],
-        "status" : "final",
-        "category" : [
+        "status": "final",
+        "category": [
           {
-            "coding" : [
+            "coding": [
               {
-                "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
-                "code" : "survey",
-                "display" : "Survey"
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey",
+                "display": "Survey"
               }
             ]
           },
           {
-            "coding" : [
+            "coding": [
               {
-                "system" : "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
-                "code" : "cognitive-status",
-                "display" : "Cognitive Status"
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
+                "code": "cognitive-status",
+                "display": "Cognitive Status"
               }
             ]
           }
         ],
-        "code" : {
-          "coding" : [
+        "code": {
+          "coding": [
             {
-              "system" : "http://loinc.org",
-              "code" : "11332-4",
-              "display" : "History of Cognitive Function Narrative"
+              "system": "http://loinc.org",
+              "code": "11332-4",
+              "display": "History of Cognitive Function Narrative"
             }
           ]
         },
-        "subject" : {
-          "reference" : "urn:uuid:d831ec91-c7a3-4a61-9312-7ff0c4a32134"
+        "subject": {
+          "reference": "urn:uuid:d831ec91-c7a3-4a61-9312-7ff0c4a32134"
         },
-        "effectiveDateTime" : "2022-11-29T20:50:32.718000+00:00",
-        "performer" : [
+        "effectiveDateTime": "2022-11-29T20:50:32.718000+00:00",
+        "performer": [
           {
             "reference": "urn:uuid:8bee2ee3-d401-3728-9791-d235cfa01ab9",
             "display": "Dr. Willena258 Oberbrunner298"
           }
         ],
-        "valueString" : "Alert and oriented x 3. She is independent in household finances, social and community activities, coherent and appropriate communication. Appropriate attire for location and weather."
+        "valueString": "Alert and oriented x 3. She is independent in household finances, social and community activities, coherent and appropriate communication. Appropriate attire for location and weather."
       },
       "request": {
         "method": "POST",
@@ -18762,69 +18833,222 @@
     {
       "fullUrl": "urn:uuid:527fa5dd-9c4f-4e31-9ac8-36d3f9bd0e98",
       "resource": {
-        "resourceType" : "Observation",
-        "id" : "527fa5dd-9c4f-4e31-9ac8-36d3f9bd0e98",
-        "meta" : {
-          "profile" : [
+        "resourceType": "Observation",
+        "id": "527fa5dd-9c4f-4e31-9ac8-36d3f9bd0e98",
+        "meta": {
+          "profile": [
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
           ]
         },
-        "identifier":[
+        "identifier": [
           {
             "system": "https://github.com/inferno-framework/us-core-test-kit",
             "value": "527fa5dd-9c4f-4e31-9ac8-36d3f9bd0e98"
           }
         ],
-        "status" : "final",
-        "category" : [
+        "status": "final",
+        "category": [
           {
-            "coding" : [
+            "coding": [
               {
-                "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
-                "code" : "survey",
-                "display" : "Survey"
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey",
+                "display": "Survey"
               }
             ]
           },
           {
-            "coding" : [
+            "coding": [
               {
-                "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
-                "code" : "activity",
-                "display" : "Activity"
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "activity",
+                "display": "Activity"
               }
             ]
           }
         ],
-        "code" : {
-          "coding" : [
+        "code": {
+          "coding": [
             {
-              "system" : "http://loinc.org",
-              "code" : "93038-8",
-              "display" : "Stress level"
+              "system": "http://loinc.org",
+              "code": "93038-8",
+              "display": "Stress level"
             }
           ],
-          "text" : "Stress level"
+          "text": "Stress level"
         },
-        "subject" : {
-          "reference" : "urn:uuid:d831ec91-c7a3-4a61-9312-7ff0c4a32134"
+        "subject": {
+          "reference": "urn:uuid:d831ec91-c7a3-4a61-9312-7ff0c4a32134"
         },
-        "effectiveDateTime" : "2022-11-29T20:50:32.718000+00:00",
-        "performer" : [
+        "effectiveDateTime": "2022-11-29T20:50:32.718000+00:00",
+        "performer": [
           {
             "reference": "urn:uuid:8bee2ee3-d401-3728-9791-d235cfa01ab9",
             "display": "Dr. Willena258 Oberbrunner298"
           }
         ],
-        "valueCodeableConcept" : {
-          "coding" : [
+        "valueCodeableConcept": {
+          "coding": [
             {
-              "system" : "http://loinc.org",
-              "code" : "LA13909-9",
-              "display" : "Somewhat"
+              "system": "http://loinc.org",
+              "code": "LA13909-9",
+              "display": "Somewhat"
             }
           ],
-          "text" : "Somewhat"
+          "text": "Somewhat"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:cf2587fa-6106-45f4-8264-fbe3d38853f5",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "cf2587fa-6106-45f4-8264-fbe3d38853f5",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-adi-documentreference|8.0.0"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-authentication-time",
+            "valueDateTime": "1941-09-05T01:11:45-04:00"
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/inferno-framework/us-core-test-kit",
+            "value": "cf2587fa-6106-45f4-8264-fbe3d38853f5"
+          }
+        ],
+        "status": "current",
+        "type": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "86533-7",
+              "display": "Patient Living will"
+            }
+          ],
+          "text": "Patient Living Will"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "42348-3",
+                "display": "Advance healthcare directives"
+              }
+            ],
+            "text": "Advance Directives"
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:d831ec91-c7a3-4a61-9312-7ff0c4a32134"
+        },
+        "date": "2024-10-08T19:48:54.316108-07:00",
+        "author": [
+          {
+            "reference": "urn:uuid:8bee2ee3-d401-3728-9791-d235cfa01ab9",
+            "display": "Dr. Willena258 Oberbrunner298"
+          }
+        ],
+        "authenticator": {
+          "reference": "urn:uuid:8bee2ee3-d401-3728-9791-d235cfa01ab9",
+          "display": "Dr. Willena258 Oberbrunner298"
+        },
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/pdf",
+              "data": "JVBERi0xLjQKJdPr6eEKMSAwIG9iago8PC9UaXRsZSAoRXhhbXBsZSBvZiBhIExpdmluZyBXaWxsKQovQ3JlYXRvciAoTW96aWxsYS81LjAgXChNYWNpbnRvc2g7IEludGVsIE1hYyBPUyBYIDEwXzE1XzdcKSBBcHBsZVdlYktpdC81MzcuMzYgXChLSFRNTCwgbGlrZSBHZWNrb1wpIENocm9tZS8xMjkuMC4wLjAgU2FmYXJpLzUzNy4zNikKL1Byb2R1Y2VyIChTa2lhL1BERiBtMTI5KQovQ3JlYXRpb25EYXRlIChEOjIwMjQxMDA0MTQ0MTUxKzAwJzAwJykKL01vZERhdGUgKEQ6MjAyNDEwMDQxNDQxNTErMDAnMDAnKT4+CmVuZG9iagozIDAgb2JqCjw8L2NhIDEKL0JNIC9Ob3JtYWw=",
+              "title": "Living Will (PDF)",
+              "creation": "1941-10-04"
+            },
+            "format": {
+              "system": "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode",
+              "code": "urn:ihe:iti:xds-sd:pdf:2008",
+              "display": "ITI XDS-SD PDF"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "DocumentReference"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:23c5bf6a-b411-424a-b466-9dee7f4838df",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "23c5bf6a-b411-424a-b466-9dee7f4838df",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-adi-documentation"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo",
+            "valueReference": {
+              "reference": "urn:uuid:cf2587fa-6106-45f4-8264-fbe3d38853f5",
+              "display": "Living Will"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://github.com/inferno-framework/us-core-test-kit",
+            "value": "23c5bf6a-b411-424a-b466-9dee7f4838df"
+          }
+        ],
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
+                "code": "observation-adi-documentation",
+                "display": "Observation ADI Documentation"
+              }
+            ],
+            "text": "Observation ADI Documentation"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "45473-6"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:d831ec91-c7a3-4a61-9312-7ff0c4a32134"
+        },
+        "effectiveDateTime": "1941-09-05T01:11:45-04:00",
+        "issued": "1941-09-05T01:11:45-04:00",
+        "performer": [
+          {
+            "reference": "urn:uuid:8bee2ee3-d401-3728-9791-d235cfa01ab9",
+            "display": "Dr. Willena258 Oberbrunner298"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "version": "http://snomed.info/sct/731000124108",
+              "code": "373066001",
+              "display": "Yes (qualifier value)"
+            }
+          ]
         }
       },
       "request": {
