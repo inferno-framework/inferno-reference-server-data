@@ -830,7 +830,7 @@
         "id": "pdex-Location",
         "identifier": [
           {
-            "system": "http://www.acme.org/location",
+            "system": "https://github.com/inferno-framework/davinci-pdex-test-kit",
             "value": "29"
           }
         ],
