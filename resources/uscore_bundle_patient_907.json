@@ -1,10 +1,10 @@
 {
   "type": "transaction",
   "entry": [
-        {
+    {
       "fullUrl": "urn:uuid:a24eb240-9ea3-4fa5-b12d-b798587879d7",
       "resource": {
-        "id": "70",
+        "id": "907",
         "meta": {
           "profile": [
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
@@ -40,16 +40,16 @@
         ],
         "name": [
           {
-            "family" : "Baxter",
-            "given" : [
+            "family": "Baxter",
+            "given": [
               "Amy",
               "V."
             ],
-            "suffix" : [
+            "suffix": [
               "PharmD"
             ],
-            "period" : {
-              "start" : "2020-07-22"
+            "period": {
+              "start": "2020-07-22"
             }
           }
         ],
@@ -59,7 +59,43 @@
       },
       "request": {
         "method": "PUT",
-        "url": "Patient/70"
+        "url": "Patient/907"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4fedd1a7-a5fa-444a-8b1b-05f19db339d0",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "4fedd1a7-a5fa-444a-8b1b-05f19db339d0",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter|8.0.0"
+          ]
+        },
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://www.ama-assn.org/go/cpt",
+                "code": "99211"
+              }
+            ],
+            "text": "Office Visit"
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:a24eb240-9ea3-4fa5-b12d-b798587879d7"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Encounter"
       }
     },
     {
@@ -74,6 +110,9 @@
         "target": [
           {
             "reference": "urn:uuid:a24eb240-9ea3-4fa5-b12d-b798587879d7"
+          },
+          {
+            "reference": "urn:uuid:4fedd1a7-a5fa-444a-8b1b-05f19db339d0"
           }
         ],
         "recorded": "2023-02-28T15:26:23.217+00:00",
