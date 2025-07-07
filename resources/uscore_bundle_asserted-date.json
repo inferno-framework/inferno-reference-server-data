@@ -2,7 +2,7 @@
   "resourceType": "Bundle",
   "type": "transaction",
   "entry": [
-      {
+    {
           "resource": {
           "resourceType" : "StructureDefinition",
           "id" : "condition-assertedDate",
