@@ -16,6 +16,11 @@
             "entity": {
                 "reference": "Patient/355"
             }
+        },
+        {
+            "entity": {
+                "reference": "Patient/907"
+            }
         }
     ]
 }

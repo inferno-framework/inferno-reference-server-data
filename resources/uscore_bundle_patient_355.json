@@ -50,36 +50,8 @@
             "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
           },
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName",
-            "valueString": "Christen366 Murray856"
-          },
-          {
             "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
             "valueCode": "M"
-          },
-          {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex",
-            "valueCode": "248153007"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/patient-birthPlace",
-            "valueAddress": {
-              "city": "Springfield",
-              "state": "Massachusetts",
-              "country": "US"
-            }
-          },
-          {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-genderIdentity",
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "system": "http://snomed.info/sct",
-                  "code": "446151000124109",
-                  "display": "Identifies as male gender (finding)"
-                }
-              ]
-            }
           },
           {
             "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-tribal-affiliation",
@@ -252,7 +224,7 @@
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
           ]
         },
-        "identifier":[
+        "identifier": [
           {
             "system": "https://github.com/inferno-framework/us-core-test-kit",
             "value": "ecd8399c-f381-beae-9a1c-afec249d4632"
@@ -975,7 +947,7 @@
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
           ]
         },
-        "identifier":[
+        "identifier": [
           {
             "system": "https://github.com/inferno-framework/us-core-test-kit",
             "value": "70b2a52f-71ba-6ffe-9050-5daee15f4d88"
@@ -2297,6 +2269,9 @@
           "reference": "urn:uuid:e91975f5-9445-c11f-cabf-c3c6dae161f2"
         },
         "recordedDate": "1941-10-14T18:33:18-05:00",
+        "recorder": {
+          "reference": "urn:uuid:e91975f5-9445-c11f-cabf-c3c6dae161f2"
+        },
         "reaction": [
           {
             "manifestation": [
@@ -5768,6 +5743,15 @@
           "reference": "urn:uuid:4c34c0db-7434-8c8f-1936-30dd023babc2",
           "display": "RIVER BEND MEDICAL GROUP - CHICOPEE OFFICE - URGENT CARE"
         },
+        "lotNumber" : "AAJN11K",
+        "performer" : [
+          {
+            "actor" : {
+              "reference": "urn:uuid:cf8468d4-5a1b-3b05-8c92-7a82e2df0128",
+              "display": "Dr. Sammie902 DuBuque211"
+            }
+          }
+        ],
         "resourceType": "Immunization"
       },
       "request": {
@@ -6631,7 +6615,16 @@
           {
             "sequence": 1,
             "text": "Take as needed.",
-            "asNeededBoolean": true
+            "asNeededBoolean": true,
+            "route": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "447694001",
+                  "display": "Respiratory tract route"
+                }
+              ]
+            }
           }
         ],
         "resourceType": "MedicationRequest"
@@ -7323,6 +7316,10 @@
         "encounter": {
           "reference": "urn:uuid:7c13ad71-94b0-83e4-db57-1b466f8140c0"
         },
+        "performer": [{
+          "reference": "urn:uuid:618787f5-2588-3dca-b90e-5e8fd27b1a36",
+          "display": "Dr. Blossom971 Christiansen251"
+        }],
         "effectiveDateTime": "1952-09-25T19:33:18-04:00",
         "issued": "1952-09-25T19:33:18.715-04:00",
         "valueQuantity": {
@@ -14299,8 +14296,7 @@
         "id": "c045c4e3-c4be-016b-a52f-3fcb63b1b791",
         "meta": {
           "profile": [
-            "http://hl7.org/fhir/StructureDefinition/resprate",
-            "http://hl7.org/fhir/StructureDefinition/vitalsigns"
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-respiratory-rate"
           ]
         },
         "status": "final",
@@ -14331,6 +14327,10 @@
         "encounter": {
           "reference": "urn:uuid:e964a4a8-4f9f-5c0f-4e68-e34329e27156"
         },
+        "performer": [{
+          "reference": "urn:uuid:618787f5-2588-3dca-b90e-5e8fd27b1a36",
+          "display": "Dr. Blossom971 Christiansen251"
+        }],
         "effectiveDateTime": "1976-02-05T18:33:18-05:00",
         "issued": "1976-02-05T18:33:18.715-05:00",
         "valueQuantity": {
@@ -16464,6 +16464,10 @@
         "encounter": {
           "reference": "urn:uuid:df3732c1-8b05-471b-0801-d40ff6bf5823"
         },
+        "performer": [{
+          "reference": "urn:uuid:618787f5-2588-3dca-b90e-5e8fd27b1a36",
+          "display": "Dr. Blossom971 Christiansen251"
+        }],
         "effectiveDateTime": "1983-03-17T18:33:18-05:00",
         "issued": "1983-03-17T18:33:18.715-05:00",
         "valueQuantity": {
@@ -17081,6 +17085,15 @@
           "reference": "urn:uuid:ecd8399c-f381-beae-9a1c-afec249d4632",
           "display": "PCP170967"
         },
+        "performer": [
+          {
+            "actor":
+              {
+                "reference": "urn:uuid:618787f5-2588-3dca-b90e-5e8fd27b1a36",
+                "display": "Dr. Blossom971 Christiansen251"
+              }
+          }
+        ],
         "resourceType": "Procedure"
       },
       "request": {
@@ -18887,10 +18900,13 @@
         "encounter": {
           "reference": "urn:uuid:9030cedd-7de1-9f69-89c5-9968cc4c2789"
         },
-        "effectivePeriod":
-        {
-          "start":"1994-05-19T19:33:18-04:00",
-          "stop":"1994-05-19T20:33:18-04:00"
+        "performer": [{
+          "reference": "urn:uuid:618787f5-2588-3dca-b90e-5e8fd27b1a36",
+          "display": "Dr. Blossom971 Christiansen251"
+        }],
+        "effectivePeriod": {
+          "start": "1994-05-19T19:33:18-04:00",
+          "stop": "1994-05-19T20:33:18-04:00"
         },
         "issued": "1994-05-19T19:33:18.715-04:00",
         "component": [
@@ -18910,15 +18926,15 @@
               ],
               "text": "Diastolic Blood Pressure"
             },
-            "dataAbsentReason" : {
-              "coding" : [
+            "dataAbsentReason": {
+              "coding": [
                 {
-                  "system" : "http://terminology.hl7.org/CodeSystem/data-absent-reason",
-                  "code" : "unknown",
-                  "display" : "Unknown"
+                  "system": "http://terminology.hl7.org/CodeSystem/data-absent-reason",
+                  "code": "unknown",
+                  "display": "Unknown"
                 }
               ],
-              "text" : "Unknown"
+              "text": "Unknown"
             }
           },
           {
@@ -18937,15 +18953,15 @@
               ],
               "text": "Systolic Blood Pressure"
             },
-            "dataAbsentReason" : {
-              "coding" : [
+            "dataAbsentReason": {
+              "coding": [
                 {
-                  "system" : "http://terminology.hl7.org/CodeSystem/data-absent-reason",
-                  "code" : "unknown",
-                  "display" : "Unknown"
+                  "system": "http://terminology.hl7.org/CodeSystem/data-absent-reason",
+                  "code": "unknown",
+                  "display": "Unknown"
                 }
               ],
-              "text" : "Unknown"
+              "text": "Unknown"
             }
           }
         ],
@@ -22007,8 +22023,7 @@
         "id": "3edd6e38-0491-77e6-10e7-e82532f5ad44",
         "meta": {
           "profile": [
-            "http://hl7.org/fhir/StructureDefinition/heartrate",
-            "http://hl7.org/fhir/StructureDefinition/vitalsigns"
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-heart-rate"
           ]
         },
         "status": "final",
@@ -25188,8 +25203,7 @@
         "id": "129b631c-9406-20e5-6903-17101f6e1489",
         "meta": {
           "profile": [
-            "http://hl7.org/fhir/StructureDefinition/bodytemp",
-            "http://hl7.org/fhir/StructureDefinition/vitalsigns"
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-temperature"
           ]
         },
         "status": "final",
@@ -26240,6 +26254,10 @@
         "encounter": {
           "reference": "urn:uuid:9d4e1390-f9cb-097a-c28f-37d34f14fe83"
         },
+        "performer": [{
+          "reference": "urn:uuid:618787f5-2588-3dca-b90e-5e8fd27b1a36",
+          "display": "Dr. Blossom971 Christiansen251"
+        }],
         "effectiveDateTime": "2013-09-05T19:33:18-04:00",
         "issued": "2013-09-05T19:33:18.715-04:00",
         "valueQuantity": {
@@ -27821,11 +27839,11 @@
         "interpretation": [
           {
             "coding": [
-                {
-                    "code": "B",
-                    "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
-                    "display": "Better"
-                }
+              {
+                "code": "B",
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "display": "Better"
+              }
             ]
           }
         ],
@@ -28197,10 +28215,17 @@
             "display": "PCP170967"
           },
           {
-            "reference": "urn:uuid:618787f5-2588-3dca-b90e-5e8fd27b1a36"
+            "reference": "urn:uuid:618787f5-2588-3dca-b90e-5e8fd27b1a36",
+            "display": "Dr Blossom971 Christiansen251"
           },
           {
             "reference": "urn:uuid:c7459800-e42b-3144-a934-59585c9eacff"
+          }
+        ],
+        "resultsInterpreter": [
+          {
+            "reference": "urn:uuid:618787f5-2588-3dca-b90e-5e8fd27b1a36",
+            "display": "Dr Blossom971 Christiansen251"
           }
         ],
         "result": [
@@ -32571,6 +32596,10 @@
             "dueDate": "2020-12-07"
           }
         ],
+        "expressedBy" : {
+            "reference": "urn:uuid:618787f5-2588-3dca-b90e-5e8fd27b1a36",
+            "display": "Dr. Blossom971 Christiansen251"
+        },
         "resourceType": "Goal"
       },
       "request": {
@@ -32796,8 +32825,7 @@
         "id": "3370b2db-bff1-4dae-b6cf-993b1a35b49a",
         "meta": {
           "profile": [
-            "http://hl7.org/fhir/StructureDefinition/resprate",
-            "http://hl7.org/fhir/StructureDefinition/vitalsigns"
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-respiratory-rate"
           ]
         },
         "status": "final",
@@ -32853,8 +32881,7 @@
         "id": "a3b6564f-3084-4261-937b-05bfe90e36a1",
         "meta": {
           "profile": [
-            "http://hl7.org/fhir/StructureDefinition/heartrate",
-            "http://hl7.org/fhir/StructureDefinition/vitalsigns"
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-heart-rate"
           ]
         },
         "status": "final",
@@ -32879,6 +32906,10 @@
           ],
           "text": "Heart rate"
         },
+        "performer": [{
+          "reference": "urn:uuid:618787f5-2588-3dca-b90e-5e8fd27b1a36",
+          "display": "Dr. Blossom971 Christiansen251"
+        }],
         "subject": {
           "reference": "urn:uuid:e91975f5-9445-c11f-cabf-c3c6dae161f2"
         },
@@ -32910,8 +32941,7 @@
         "id": "61c8aa40-25fd-4029-9ab4-783b1d50bed8",
         "meta": {
           "profile": [
-            "http://hl7.org/fhir/StructureDefinition/bodytemp",
-            "http://hl7.org/fhir/StructureDefinition/vitalsigns"
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-temperature"
           ]
         },
         "status": "final",
@@ -32947,6 +32977,10 @@
         "encounter": {
           "reference": "urn:uuid:6883f6b3-07d1-f630-d287-b1fa3a3e0e13"
         },
+        "performer": [{
+          "reference": "urn:uuid:eb10a604-ac01-3975-ad58-4c34606af456",
+          "display": "Dr. Patricia625 Kilback373"
+        }],
         "effectiveDateTime": "2009-08-19T19:33:18-04:00",
         "issued": "2009-08-19T19:33:18.715-04:00",
         "dataAbsentReason": {
@@ -33118,6 +33152,10 @@
         "encounter": {
           "reference": "urn:uuid:9030cedd-7de1-9f69-89c5-9968cc4c2789"
         },
+        "performer": [{
+          "reference": "urn:uuid:618787f5-2588-3dca-b90e-5e8fd27b1a36",
+          "display": "Dr. Blossom971 Christiansen251"
+        }],
         "effectiveDateTime": "1994-05-19T19:33:18-04:00",
         "issued": "1994-05-19T19:33:18.715-04:00",
         "dataAbsentReason": {
@@ -33189,8 +33227,7 @@
         "id": "5c5c96db-52b0-4c06-a1a5-4711a2ff6bf6",
         "meta": {
           "profile": [
-            "http://hl7.org/fhir/StructureDefinition/resprate",
-            "http://hl7.org/fhir/StructureDefinition/vitalsigns"
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-respiratory-rate"
           ]
         },
         "status": "final",
@@ -33245,8 +33282,7 @@
         "id": "6d04d2d8-d984-468e-bca2-b1f31956b508",
         "meta": {
           "profile": [
-            "http://hl7.org/fhir/StructureDefinition/heartrate",
-            "http://hl7.org/fhir/StructureDefinition/vitalsigns"
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-heart-rate"
           ]
         },
         "status": "final",
@@ -33476,6 +33512,10 @@
         "encounter": {
           "reference": "urn:uuid:65abf8dc-d463-e590-71e7-dea000842f94"
         },
+        "performer": [{
+          "reference": "urn:uuid:618787f5-2588-3dca-b90e-5e8fd27b1a36",
+          "display": "Dr. Blossom971 Christiansen251"
+        }],
         "effectivePeriod": {
           "start": "1940-09-05T19:33:18-04:00",
           "end": "1940-09-05T20:33:18-04:00"
@@ -33531,6 +33571,10 @@
         "encounter": {
           "reference": "urn:uuid:7b8b502d-2f00-f1da-3ada-9b4ee98476ba"
         },
+        "performer": [{
+          "reference": "urn:uuid:618787f5-2588-3dca-b90e-5e8fd27b1a36",
+          "display": "Dr. Blossom971 Christiansen251"
+        }],
         "effectivePeriod": {
           "start": "1944-02-10T19:33:18-04:00",
           "end": "1944-02-10T20:33:18-04:00"
@@ -33583,6 +33627,10 @@
         "subject": {
           "reference": "urn:uuid:e91975f5-9445-c11f-cabf-c3c6dae161f2"
         },
+        "performer": [{
+          "reference": "urn:uuid:618787f5-2588-3dca-b90e-5e8fd27b1a36",
+          "display": "Dr. Blossom971 Christiansen251"
+        }],
         "effectivePeriod": {
           "start": "1940-10-05T00:00:00+00:00",
           "end": "1940-10-05T01:00:00+00:00"
@@ -33662,8 +33710,7 @@
         "id": "2691f7de-5775-428a-9bd8-b28b7d0afd8f",
         "meta": {
           "profile": [
-            "http://hl7.org/fhir/StructureDefinition/bodytemp",
-            "http://hl7.org/fhir/StructureDefinition/vitalsigns"
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-temperature"
           ]
         },
         "status": "final",
@@ -33895,7 +33942,10 @@
           "reference": "urn:uuid:e91975f5-9445-c11f-cabf-c3c6dae161f2"
         },
         "abatementDateTime": "2016-08-10T07:15:07-08:00",
-        "recordedDate": "2016-08-10T07:15:07-08:00"
+        "recordedDate": "2016-08-10T07:15:07-08:00",
+        "recorder": {
+          "reference": "urn:uuid:e91975f5-9445-c11f-cabf-c3c6dae161f2"
+        }
       },
       "request": {
         "method": "POST",
