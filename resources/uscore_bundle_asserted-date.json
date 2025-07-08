@@ -2,7 +2,7 @@
   "resourceType": "Bundle",
   "type": "transaction",
   "entry": [
-      {
+    {
           "resource": {
           "resourceType" : "StructureDefinition",
           "id" : "condition-assertedDate",
@@ -253,7 +253,7 @@
               "valueCode" : "cgp"
             }],
             "url" : "http://hl7.org/fhir/us/core/SearchParameter/us-core-condition-asserted-date",
-            "version" : "7.0.0-ballot",
+            "version" : "7.0.0",
             "name" : "USCoreConditionAssertedDate",
             "status" : "active",
             "date" : "2023-04-13",

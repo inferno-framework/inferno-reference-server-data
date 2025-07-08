@@ -18333,7 +18333,7 @@
         "id": "bef6c601-bc94-4f55-9f87-7f46afcc2943",
         "meta": {
           "profile": [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-care-experience-preference|7.0.0-ballot"
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-care-experience-preference"
           ]
         },
         "identifier": [
@@ -19065,7 +19065,7 @@
         "id": "ce01eb8d-1574-4fcf-8456-7c80bfd9e5b9",
         "meta": {
           "profile": [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference|8.0.0-ballot"
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference"
           ]
         },
         "identifier": [
