@@ -5012,11 +5012,11 @@
               }
             ],
             "active": true,
-            "name": "Genzyme",
+            "name": "Example Org",
             "telecom": [
               {
                 "system": "url",
-                "value": "https://www.sanofigenzyme.com/",
+                "value": "https://example.com/",
                 "use": "work"
               }
             ],
